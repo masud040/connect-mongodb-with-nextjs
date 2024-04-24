@@ -1,5 +1,4 @@
 const { default: mongoose } = require("mongoose");
-const { minify } = require("next/dist/build/swc");
 
 const UserSchema = new mongoose.Schema({
   name: {
@@ -20,5 +19,5 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-const User = mongoose.models.User || mongoose.models("User", UserSchema);
+const User = mongoose.models.User || mongoose.model("User", UserSchema);
 export default User;

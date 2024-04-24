@@ -11,6 +11,7 @@ export default function NewUserForm() {
       email,
     };
     await connectMongo();
+    // intsert user data
     await new User(userData).save();
   };
   return (
