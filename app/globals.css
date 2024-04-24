@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  body {
+    @apply text-white bg-black p-10 max-w-[1400px] mx-auto;
+  }
+  h1 {
+    @apply py-6 text-2xl font-bold;
+  }
+
+  h2 {
+    @apply py-4 text-xl font-bold;
+  }
+
+  h3 {
+    @apply py-2 text-lg font-medium;
+  }
+
+  p {
+    @apply mt-2 mb-4 leading-7 text-justify text-gray-500;
+  }
+
+  input {
+    @apply w-full p-2 py-2 my-2 mr-2 transition-all bg-gray-900 border-none rounded outline-none focus:ring ring-cyan-500/50 placeholder:text-slate-500;
+  }
+  button {
+    @apply w-full p-1 py-1 mt-5 mr-2 rounded bg-cyan-800;
+  }
+  .box-2 {
+    @apply border border-gray-300/40 bg-gray-700/50 rounded-lg p-8 max-w-[800px] m-4 mt-10;
+  }
+  .box-3 {
+    @apply border-red-300/40 bg-red-700/20;
+  }
+}
